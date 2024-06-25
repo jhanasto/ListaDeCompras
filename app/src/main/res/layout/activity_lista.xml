@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ListaActivity"
     android:id="@+id/main">
 
 
@@ -20,40 +20,21 @@
         app:title="Lista de Compras"
         app:titleTextColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/textViewWelcome"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCompras"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="32dp"
-        android:text="Bienvenido a la Lista de Compras"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/compras_list"
+        app:layout_constraintBottom_toTopOf="@+id/agregar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/textViewWelcome2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
-        android:text="Crea tu primera lista haciendo clic en  十  en la parte inferior de la pantalla"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewWelcome"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.521" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddItem"
+        android:id="@+id/agregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -67,7 +48,7 @@
         tools:ignore="HardcodedText,ImageContrastCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddItem2"
+        android:id="@+id/btnSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

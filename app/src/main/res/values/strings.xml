@@ -3,4 +3,6 @@
     <string name="text_login">Iniciar Sesión</string>
     <string name="imagen_logo">logo</string>
     <string name="default_web_client_id">1000680344555-54fus4d434lqa7u1ll2q7dl8mk073lkl.apps.googleusercontent.com</string>
+    <string name="nombre">Nombre:</string>
+    <string name="txtnombre">Cebolla</string>
 </resources>
